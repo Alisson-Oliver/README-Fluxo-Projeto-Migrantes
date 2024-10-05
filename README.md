@@ -130,7 +130,8 @@ Abaixo está a estrutura dos diretórios e suas respectivas responsabilidades:
 9.  **src/index.js**
     
     Este é o ponto de entrada da aplicação. Aqui, inicializamos o servidor, configura middlewares e define as rotas, garantindo que a API esteja pronta para receber requisições.
-    
+
+---
 
 ### **6\. Criação de Testes Unitários**
 
@@ -140,7 +141,7 @@ Abaixo está a estrutura dos diretórios e suas respectivas responsabilidades:
 
 ---
 
-### 7\. Criação e Utilização do Banco de Dados no Supabase
+### 7\. Utilização do Banco de Dados no Supabase
 
 → Após a conclusão dos testes unitários, o próximo passo será criar o banco de dados no **Supabase** e configurar a API Rest para utilizá-lo. O Supabase é uma plataforma de backend como serviço (BaaS) que facilita a criação de bancos de dados PostgreSQL e oferece funcionalidades para autenticação, armazenamento e execução de consultas.
 
