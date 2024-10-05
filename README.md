@@ -41,7 +41,7 @@ Para isso, iremos organizar os diretórios da seguinte forma:
 
 ---
 
-### 3\. Iniciar um Projeto Node.js com os módulos 
+### 3\. Iniciar um Projeto Node.js com os módulos
 
 → Para iniciar o projeto Node.js, utilizaremos o npm para instalar os módulos necessários ao desenvolvimento. 
 
@@ -76,7 +76,6 @@ Abaixo está a estrutura dos diretórios e suas respectivas responsabilidades:
     Este diretório deve conter arquivos de configuração da aplicação.
     
     *   **database.js**: Configurações de conexão com o banco de dados PostgreSQL usando Sequelize.
-        
 2.  **src/controllers**
     
     Os controladores lidam com a lógica de negócio e a interação entre os modelos e as rotas.
@@ -84,7 +83,6 @@ Abaixo está a estrutura dos diretórios e suas respectivas responsabilidades:
     *   **authController.js**: Controlador responsável pela autenticação, incluindo login, registro e recuperação de senha.
     *   **migrantController.js**: Controlador para operações relacionadas a migrantes, como criação, atualização e listagem.
     *   **organizationController.js**: Controlador para operações relacionadas a organizações e ONGs, abrangendo criação, atualização e busca.
-        
 3.  **src/middlewares**
     
     Os middlewares são funções que têm acesso ao objeto de solicitação (req), ao objeto de resposta (res) e à próxima função middleware.
@@ -92,7 +90,6 @@ Abaixo está a estrutura dos diretórios e suas respectivas responsabilidades:
     *   **authMiddleware.js**: Middleware para verificar o token JWT em requisições protegidas, garantindo que apenas usuários autenticados possam acessar certas rotas.
     *   **errorHandler.js**: Middleware responsável pelo tratamento de erros, que captura e responde a erros de maneira uniforme.
     *   **validationMiddleware.js**: Middleware para validar dados de entrada usando `Joi`, garantindo que os dados recebidos estejam no formato correto.
-        
 4.  **src/models**
     
     Este diretório deve conter as definições dos modelos de dados.
@@ -100,7 +97,6 @@ Abaixo está a estrutura dos diretórios e suas respectivas responsabilidades:
     *   **migrant.js**: Modelo Sequelize para a tabela de migrantes, definindo as propriedades e relacionamentos necessários.
     *   **organization.js**: Modelo Sequelize para a tabela de organizações, com suas respectivas propriedades.
     *   **user.js**: Modelo Sequelize para a tabela de usuários, definindo as propriedas e relacionamentos necessários.
-        
 5.  **src/routes**
     
     As rotas definem os endpoints da API e vinculam as solicitações aos controladores.
@@ -109,7 +105,6 @@ Abaixo está a estrutura dos diretórios e suas respectivas responsabilidades:
     *   **migrantRoutes.js**: Rotas para operações relacionadas a migrantes, como criar, editar e listar migrantes.
     *   **organizationRoutes.js**: Rotas para operações relacionadas a organizações, como cadastrar e buscar informações.
     *   **userRoutes.js**: Rotas para operações relacionadas a usuários, incluindo gerenciamento de informações e interações.
-        
 6.  **src/services**
     
     Os serviços são responsáveis pela lógica de negócio mais complexa e podem ser utilizados pelos controladores.
@@ -118,14 +113,12 @@ Abaixo está a estrutura dos diretórios e suas respectivas responsabilidades:
     *   **migrantService.js**: Lógica relacionada à manipulação de dados dos migrantes, como busca e filtragem.
     *   **organizationService.js**: Lógica relacionada à manipulação de dados das organizações, como registro e pesquisa.
     *   **userService.js**: Lógica para gerenciar dados de usuários, incluindo criação, atualização e exclusão.
-        
 7.  **src/utils**
     
     Este diretório pode conter funções utilitárias que são usadas na aplicação.
     
     *   **generatePassword.js**: Função para gerar senhas utilizando a biblioteca `generate-password`.
     *   **encryptPassword.js**: Função para criptografar senhas utilizando a biblioteca `bcrypt`, garantindo segurança nas credenciais dos usuários.
-        
 8.  **src/tests**
     
     Para garantir que a API funcione corretamente, deve-se criar testes unitários e de integração.
@@ -134,7 +127,6 @@ Abaixo está a estrutura dos diretórios e suas respectivas responsabilidades:
     *   **migrant.test.js**: Testes para operações relacionadas a migrantes, assegurando que as operações de criação e listagem estejam corretas.
     *   **organization.test.js**: Testes para operações relacionadas a organizações, validando o funcionamento das rotas associadas.
     *   **user.test.js**: Testes para operações relacionadas a usuários, garantindo que as interações com o sistema sejam corretas e seguras.
-        
 9.  **src/index.js**
     
     Este é o ponto de entrada da aplicação. Aqui, inicializamos o servidor, configura middlewares e define as rotas, garantindo que a API esteja pronta para receber requisições.
@@ -148,7 +140,15 @@ Abaixo está a estrutura dos diretórios e suas respectivas responsabilidades:
 
 ---
 
-### 7\. Teste da API Rest com o Postman
+### 7\. Criação e Utilização do Banco de Dados no Supabase
+
+→ Após a conclusão dos testes unitários, o próximo passo será criar o banco de dados no **Supabase** e configurar a API Rest para utilizá-lo. O Supabase é uma plataforma de backend como serviço (BaaS) que facilita a criação de bancos de dados PostgreSQL e oferece funcionalidades para autenticação, armazenamento e execução de consultas.
+
+Após a validação completa e teste da API com o banco de dados do Supabase, o banco de dados final será configurado. Isso poderá incluir ajustes nas tabelas, normalização de dados e otimizações para garantir o desempenho da aplicação em produção.
+
+---
+
+### 8\. Teste da API Rest com o Postman
 
 → O Postman é uma ferramenta poderosa para testar APIs, permitindo simular requisições HTTP e visualizar as respostas de forma intuitiva. Para realizar os testes na API Rest, siga os passos abaixo:
 
@@ -177,7 +177,7 @@ O Postman fornece feedback claro sobre os testes realizados, facilitando a ident
 
 ---
 
-### **8\. Deploy**
+### **9\. Deploy**
 
 → O próximo passo no desenvolvimento da API Rest será realizar o deploy, tornando-a acessível publicamente. Neste momento, ainda não há um local definido para a realização do deploy, mas várias opções disponíveis no mercado podem ser consideradas.
 
@@ -192,6 +192,6 @@ Assim que a plataforma de deploy for decidida, será possível seguir os procedi
 
 ---
 
-### **9\. Conclusão**
+### **10\. Conclusão**
 
 → Este documento estabelece um fluxo inicial para o desenvolvimento da API Rest do Mhelp. Com uma abordagem estruturada e colaborativa, esperamos criar uma aplicação robusta e eficiente, capaz de atender às necessidades de nossos usuários.
